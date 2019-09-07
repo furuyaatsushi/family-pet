@@ -1,0 +1,33 @@
+.wrapper
+  .cases-top
+    .main-header
+      .main-header__title
+        里親募集サイト
+      .main-header__right-box
+        .main-header__right-box__signup-btn
+          =link_to '新規登録', new_user_registration_path
+        .main-header__right-box__login-btn
+          =link_to 'ログイン', user_session_path
+    .menu-bar
+      .home-btn.menu-btn
+        =link_to 'HOME', root_path
+      .description-btn.menu-btn
+        =link_to 'Family-Petとは？'
+      .dm-btn.menu-btn
+        =link_to 'ダイレクトメッセージ'
+    .search-bar
+      .refine
+        絞り込み
+      .select-animal
+        犬か猫
+        %select{name: "犬か猫", size: "1"}
+          %option{value: "dog"}犬
+          %option{value: "cat"}猫
+      .select-prefecture
+        都道府県
+      .search-keyword
+        キーワードで検索
+        %input{type: 'text', placeholder: 'キーワードを入力', value: ''}
+        %input{type: 'submit', value: '検索'}
+  
+  .cases-main
