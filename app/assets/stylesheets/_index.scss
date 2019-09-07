@@ -1,0 +1,103 @@
+.wrapper{
+  width: 100%;
+  height: 100vh;
+}
+
+.cases-top{
+  height: 160px;
+  width: 100%;
+  .main-header{
+    height: 80px;
+    background-color: #f0fff0;
+    &__title{
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 80px;
+      padding-left: 10px;
+    }
+    &__right-box{
+      display: flex;
+      float: right;
+      width: 300px;
+      height: 80px;
+      &__signup-btn{
+        margin: 15px 0;
+        line-height: 50px;
+        text-align: center;
+        height: 50px;
+        width: 100px;
+        background-color: #b22222;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+      &__login-btn{
+        margin: 15px;
+        line-height: 50px;
+        text-align: center;
+        height: 50px;
+        width: 100px;
+        background-color: #4169e1;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .menu-bar{
+    display: flex;
+    height: 40px;
+    background-color: #fffff0;
+    border-bottom: solid 1px #dcdcdc;
+    .menu-btn{
+      width: 150px;
+      border-right: solid 1px #dcdcdc;
+      text-align: center;
+      line-height: 40px;
+      a{
+        text-decoration: none;
+        color: #696969;
+      }
+    }
+    .dm-btn{
+      border-right: none;
+      width: 180px;
+    }
+  }
+
+  .search-bar{
+    display: flex;
+    height: 40px;
+    background-color: #fffff0;
+    .refine{
+      width: 100px;
+      text-align: center;
+      line-height: 40px;
+      border-right: solid 1px #dcdcdc;
+    }
+    .select-animal{
+      width: 150px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .select-prefecture{
+      width: 150px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .search-keyword{
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+}
+
+.cases-main{
+  background-color: #f5f5f5;
+  width: 100%;
+  height: calc(100% - 160px);
+}

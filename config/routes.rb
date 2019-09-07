@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get 'cases' => 'cases#index'
+  devise_for :users
+  root 'cases#index'
+  resources :cases
 end
