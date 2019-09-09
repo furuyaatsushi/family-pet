@@ -16,18 +16,19 @@
       .dm-btn.menu-btn
         =link_to 'ダイレクトメッセージ'
     .search-bar
-      .refine
-        絞り込み
-      .select-animal
-        犬か猫
-        %select{name: "犬か猫", size: "1"}
-          %option{value: "dog"}犬
-          %option{value: "cat"}猫
-      .select-prefecture
-        都道府県
-      .search-keyword
-        キーワードで検索
-        %input{type: 'text', placeholder: 'キーワードを入力', value: ''}
-        %input{type: 'submit', value: '検索'}
+      =form_tag :search_cases, method: :get do
+        .refine
+          絞り込み
+        .select-animal
+          犬か猫
+          =select_tag :animal_id, options_for_select([["犬", "犬"], ["猫", "猫"]])
+        .select-prefecture
+          都道府県
+          =select_tag :prefecture_id, options_from_collection_for_select(Prefecture.all, :id, :name)
+        .search-keyword
+          キーワードで検索
+          =text_field_tag :keyword
+        .submit
+          =submit_tag "指定した条件で検索"
   
   .cases-main

@@ -73,25 +73,29 @@
     display: flex;
     height: 40px;
     background-color: #fffff0;
-    .refine{
-      width: 100px;
-      text-align: center;
-      line-height: 40px;
-      border-right: solid 1px #dcdcdc;
-    }
-    .select-animal{
-      width: 150px;
-      text-align: center;
-      line-height: 40px;
-    }
-    .select-prefecture{
-      width: 150px;
-      text-align: center;
-      line-height: 40px;
-    }
-    .search-keyword{
-      text-align: center;
-      line-height: 40px;
+    form{
+      display: flex;
+      width: 100%;
+      .refine{
+        width: 100px;
+        text-align: center;
+        line-height: 40px;
+        border-right: solid 1px #dcdcdc;
+      }
+      .select-animal{
+        width: 150px;
+        text-align: center;
+        line-height: 40px;
+      }
+      .select-prefecture{
+        width: 150px;
+        text-align: center;
+        line-height: 40px;
+      }
+      .search-keyword{
+        text-align: center;
+        line-height: 40px;
+      }
     }
   }
 }
