@@ -1,0 +1,21 @@
+.form__signup{
+  width: 90%;
+  height: 100%;
+  margin: 5%;
+  padding: 50px;
+  border: solid 1px #dcdcdc;
+  box-sizing: border-box;
+  h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .field__name{
+    .user-name__text-field{
+      height: 20px;
+      width: 200px;
+      font-size: 20px;
+      float: right;
+    }
+  }
+}

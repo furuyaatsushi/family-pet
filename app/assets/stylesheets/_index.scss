@@ -88,11 +88,17 @@
         line-height: 40px;
       }
       .select-prefecture{
-        width: 150px;
+        width: 200px;
         text-align: center;
         line-height: 40px;
       }
       .search-keyword{
+        width: 300px;
+        text-align: center;
+        line-height: 40px;
+      }
+      .submit{
+        width: 150px;
         text-align: center;
         line-height: 40px;
       }
@@ -104,4 +110,24 @@
   background-color: #f5f5f5;
   width: 100%;
   height: calc(100% - 160px);
+  .cases{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px 20px 0 20px; 
+    .case{
+      height: 300px;
+      width: 200px;
+      border: solid 1px #dcdcdc;
+      background-color: #ffffff;
+      margin-right: 50px;
+      padding: 10px;
+      box-sizing: border-box;
+      .case__picture{
+        height: 150px;
+        width: 180px;
+        border: solid 1px #dcdcdc;
+        box-sizing: border-box;
+      }
+    }
+  }
 }
