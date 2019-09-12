@@ -1,0 +1,88 @@
+.form{
+  width: 90%;
+  height: 100vh;
+  margin: 2% 5% 2% 5%;
+  padding: 50px;
+  border: solid 1px #dcdcdc;
+  box-sizing: border-box;
+  min-height: 620px;
+  h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .form__field{
+    padding: 20px 100px 0 100px;
+    border-top: solid 1px #dcdcdc; 
+    .field{
+      margin-bottom: 20px;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .field__signup{
+      margin-bottom: 40px;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .field__passward{
+      margin-bottom: 30px;
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .text-field{
+      height: 40px;
+      width: 200px;
+      font-size: 20px;
+    }
+    .password-field{
+      float: right;
+      height: 40px;
+      width: 200px;
+      font-size: 20px;
+    }
+    select{
+      line-height: 40px; 
+      font-size: 15px;
+    }
+    .actions{
+      input{
+        width: 100px;
+        font-size: 15px;
+        background-color: #f5f5f5;
+        border-radius: 5%;
+      }
+    }
+    .link-login{
+      width: 70px;
+      text-align: center;
+      float: right;
+      height: 20px;
+      a{
+        color: #4169e1;
+      }
+    }
+    .field__checkbox{
+      font-size: 18px;
+      margin-bottom: 30px;
+      height: 40px;
+      line-height: 40px;
+    }
+    .link-signup{
+      float: right;
+      text-align: right;
+      a{
+        color: #4169e1;
+        margin-bottom: 5px;
+        display: block;
+      }
+    }
+  }
+}

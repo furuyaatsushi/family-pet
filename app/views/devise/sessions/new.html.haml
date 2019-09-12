@@ -1,0 +1,21 @@
+.form
+  %h2 ログイン画面
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .form__field
+      .field__signup
+        = f.label :名前, class: "user-name"
+        = f.text_field :name, autofocus: true, class: "text-field"
+      .field__signup
+        = f.label :メールアドレス
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "text-field"
+      .field__signup
+        = f.label :パスワード
+        = f.password_field :password, autocomplete: "current-password", class: "text-field"
+      - if devise_mapping.rememberable?
+        .field__checkbox
+          = f.check_box :remember_me
+          = f.label :入力情報を記憶しますか？
+      .field.actions
+        = f.submit "ログイン"
+      .link-signup
+        = render "devise/shared/links"

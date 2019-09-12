@@ -5,6 +5,7 @@ class CasesController < ApplicationController
   end
 
   def search
+    binding.pry
   end
 
 end
