@@ -4,8 +4,16 @@ class CasesController < ApplicationController
     @cases = Case.all
   end
 
+  def show
+    @case = Case.find(params[:id])
+  end
+
   def search
     binding.pry
   end
 
+  private
+  def casae_params
+    params.require(:case).permit(:id)
+  end
 end

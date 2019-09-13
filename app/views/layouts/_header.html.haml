@@ -31,21 +31,3 @@
         =text_field_tag :keyword
       .submit
         =submit_tag "指定した条件で検索"
-
-.cases-main
-  .cases
-    - @cases.each do |a_case|
-      =link_to case_path(a_case) do
-        .case
-          .case__picture
-            = a_case.picture
-          .case__kind
-            = a_case.kind
-          .case__sex
-            = a_case.sex
-          .case__prefecture
-            = a_case.prefecture
-          .case__age
-            = a_case.age
-          .case__created_at
-            = a_case.created_at.strftime("%Y年%-m月%-d日")

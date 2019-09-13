@@ -1,0 +1,28 @@
+= render partial: 'layouts/header'
+.case-show__main
+  .case-show__picture
+    = @case.picture
+  .case-show__right-box
+    .case-show__animal.case-content
+      = @case.animal
+    .case-show__kind.case-content
+      = @case.animal + "種:"
+      = @case.kind
+    .case-show__sex.case-content
+      性別:
+      = @case.sex
+    .case-show__prefecture.case-content
+      居住地:
+      = @case.prefecture
+    .case-show__age.case-content
+      年齢:
+      = @case.age
+    .case-show__other.case-content
+      備考:
+      = @case.other
+    .case-show__comment.case-content
+      コメント:
+      = @case.comment
+    .case-show__created_at.case-content
+      投稿日時:
+      = @case.created_at.strftime("%Y年%-m月%-d日 %H時")
