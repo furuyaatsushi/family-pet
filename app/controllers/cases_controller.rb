@@ -9,7 +9,9 @@ class CasesController < ApplicationController
   end
 
   def search
-    binding.pry
+  end
+
+  def about
   end
 
   private

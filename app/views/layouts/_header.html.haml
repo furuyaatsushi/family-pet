@@ -4,7 +4,7 @@
       里親募集サイト「Family-Pet」
     .main-header__right-box
       -if user_signed_in?
-        .main-header__current-user
+        .main-header__right-box__current-user
           ようこそ、
           = current_user.name + 'さん'
         .main-header__right-box__signout-btn
@@ -18,7 +18,7 @@
     .home-btn.menu-btn
       =link_to 'HOME', root_path
     .description-btn.menu-btn
-      =link_to 'Family-Petとは？'
+      =link_to 'Family-Petとは？', about_path
     .dm-btn.menu-btn
       =link_to 'ダイレクトメッセージ'
   .search-bar

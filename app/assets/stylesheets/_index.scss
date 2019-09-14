@@ -19,10 +19,26 @@
     &__right-box{
       display: flex;
       float: right;
-      width: 300px;
+      width: 350px;
       height: 80px;
+      &__current-user{
+        width: calc(100% - 110px);
+        line-height: 80px;
+      }
+      &__signout-btn{
+        margin: 15px;
+        line-height: 50px;
+        text-align: center;
+        height: 50px;
+        width: 110px;
+        background-color: #4169e1;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
       &__signup-btn{
-        margin: 15px 0;
+        margin: 15px 0 15px 120px;
         line-height: 50px;
         text-align: center;
         height: 50px;
