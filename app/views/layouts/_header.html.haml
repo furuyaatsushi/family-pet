@@ -21,6 +21,8 @@
       =link_to 'Family-Petとは？', about_path
     .dm-btn.menu-btn
       =link_to 'ダイレクトメッセージ'
+    .post-btn
+      =link_to '投稿する', new_case_path
   .search-bar
     =form_tag :search_cases, method: :get do
       .refine

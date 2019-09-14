@@ -1,0 +1,70 @@
+.post-form{
+  width: 90%;
+  height: 100%;
+  margin: 2% 5% 2% 5%;
+  padding: 50px;
+  box-sizing: border-box;
+  border: solid 1px #dcdcdc;
+  h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #dcdcdc;
+  }
+  .post-form__main{
+    padding: 0 50px;
+  }
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .post-form__comment-field{
+    height: 110px;
+    font-size: 20px;
+    .post-form__field__left{
+      float: left;
+    }
+    .post-form__field__right{
+      float: right;
+      .case-post-form__comment{
+        height: 100px;
+        width: 300px;
+        font-size: 15px;
+      }
+    }
+  }
+  .post-form__field{
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    .post-form__field__left{
+      float: left;
+    }
+    .post-form__field__right{
+      float: right;
+      .case-post-form__image{
+        font-size: 15px;
+      }
+      select{
+        height: 30px;
+        width: 80px;
+        font-size: 15px;
+      }
+      .case-post-form__text{
+        height: 30px;
+        width: 300px;
+        font-size: 15px;
+      }
+      .form__submit{
+        background-color: #f5f5f5;
+        height: 30px;
+        width: 80px;
+        font-size: 15px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

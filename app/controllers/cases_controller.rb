@@ -8,6 +8,13 @@ class CasesController < ApplicationController
     @case = Case.find(params[:id])
   end
 
+  def new
+    @case = Case.new
+  end
+
+  def create
+  end
+
   def search
   end
 

@@ -3,13 +3,13 @@
   = @case.user.name + "さんの募集"
 .case-show__main
   .case-show__picture
-    = @case.picture
+    = @case.image
   .case-show__right-box
     .case-show__right-box__top.clearfix
       .case-show__animal.case-content
         = @case.animal
       .case-show__dm
-        ダイレクトメッセージを送る
+        =link_to 'ダイレクトメッセージを送る'
     .case-show__kind.case-content
       = @case.animal + "種:"
       &ensp;
