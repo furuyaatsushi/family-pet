@@ -3,12 +3,17 @@
     .main-header__title
       里親募集サイト「Family-Pet」
     .main-header__right-box
-      .main-header__right-box__signup-btn
-        =link_to '新規登録', new_user_registration_path
-      .main-header__right-box__login-btn
-        =link_to 'ログイン', user_session_path
-      .main-header__right-box__signout-btn
-        =link_to 'サインアウト', destroy_user_session_path, method: :delete
+      -if user_signed_in?
+        .main-header__current-user
+          ようこそ、
+          = current_user.name + 'さん'
+        .main-header__right-box__signout-btn
+          =link_to 'サインアウト', destroy_user_session_path, method: :delete
+      -else
+        .main-header__right-box__signup-btn
+          =link_to '新規登録', new_user_registration_path
+        .main-header__right-box__login-btn
+          =link_to 'ログイン', user_session_path
   .menu-bar
     .home-btn.menu-btn
       =link_to 'HOME', root_path
