@@ -19,6 +19,7 @@ class CasesController < ApplicationController
   end
 
   def about
+    @page_title = 'このサイトについて'
   end
 
   private
