@@ -3,7 +3,7 @@
   = @case.user.name + "さんの募集"
 .case-show__main
   .case-show__picture
-    = @case.image
+    = image_tag @case.image
   .case-show__right-box
     .case-show__right-box__top.clearfix
       .case-show__animal.case-content
@@ -19,7 +19,7 @@
       = @case.sex
     .case-show__prefecture.case-content
       居住地:&ensp;
-      = @case.prefecture
+      = @case.prefecture.name
     .case-show__age.case-content
       年齢:&ensp;
       = @case.age

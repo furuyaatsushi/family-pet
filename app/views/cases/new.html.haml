@@ -31,7 +31,7 @@
         .post-form__field__left
           = f.label :居住地
         .post-form__field__right
-          = f.collection_select :prefecture, Prefecture.all, :id, :name
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name
       .post-form__field.clearfix
         .post-form__field__left
           = f.label :予防接種・しつけなど

@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190914102435) do
+ActiveRecord::Schema.define(version: 20190916085906) do
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "animal",                   null: false
+    t.string   "animal",                      null: false
     t.string   "kind"
     t.string   "sex"
     t.string   "age"
-    t.text     "comment",    limit: 65535
-    t.text     "other",      limit: 65535
-    t.text     "image",      limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "prefecture"
+    t.text     "comment",       limit: 65535
+    t.text     "other",         limit: 65535
+    t.text     "image",         limit: 65535
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "user_id"
+    t.integer  "prefecture_id"
+    t.index ["prefecture_id"], name: "index_cases_on_prefecture_id", using: :btree
     t.index ["user_id"], name: "index_cases_on_user_id", using: :btree
   end
 
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 20190914102435) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "cases", "prefectures"
   add_foreign_key "cases", "users"
   add_foreign_key "users", "cases"
 end

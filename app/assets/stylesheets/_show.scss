@@ -10,6 +10,10 @@
     height: 400px;
     width: 300px;
     border: solid 1px #dcdcdc;
+    img{
+      max-height: 398px;
+      max-width: 298px;
+    }
   }
   .case-show__right-box{
     margin: 0 50px;
@@ -33,6 +37,7 @@
         line-height: 30px;
         text-align: center;
         float: left;
+        background-color: #f4a406;
       }
       .case-show__dm{
         font-size: 12px;
