@@ -1,0 +1,47 @@
+.post-form
+  %h2 投稿フォーム
+  = form_for @case do |f|
+    .post-form__main
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :写真 
+        .post-form__field__right
+          = f.file_field :image, class: 'case-post-form__image'
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :犬か猫か選択してください, class: 'case-post-form__label'
+        .post-form__field__right
+          = f.select :animal, options_for_select([["犬", "犬"], ["猫", "猫"]])
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :犬種・猫種
+        .post-form__field__right
+          = f.text_field :kind, class: 'case-post-form__text'
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :性別
+        .post-form__field__right
+          = f.select :sex, options_for_select([["オス", "オス"], ["メス", "メス"]])
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :年齢
+        .post-form__field__right
+          = f.text_field :age, class: 'case-post-form__text'
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :居住地
+        .post-form__field__right
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+      .post-form__field.clearfix
+        .post-form__field__left
+          = f.label :予防接種・しつけなど
+        .post-form__field__right
+          = f.text_field :other, class: 'case-post-form__text'
+      .post-form__comment-field.clearfix
+        .post-form__field__left
+          = f.label :コメント
+        .post-form__field__right
+          = f.text_area :comment, class: 'case-post-form__comment'
+      .post-form__field
+        .post-form__field__right
+          = f.submit '投稿', class: 'form__submit'

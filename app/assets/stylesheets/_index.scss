@@ -19,10 +19,26 @@
     &__right-box{
       display: flex;
       float: right;
-      width: 300px;
+      width: 350px;
       height: 80px;
+      &__current-user{
+        width: calc(100% - 110px);
+        line-height: 80px;
+      }
+      &__signout-btn{
+        margin: 15px;
+        line-height: 50px;
+        text-align: center;
+        height: 50px;
+        width: 110px;
+        background-color: #4169e1;
+        a{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
       &__signup-btn{
-        margin: 15px 0;
+        margin: 15px 0 15px 120px;
         line-height: 50px;
         text-align: center;
         height: 50px;
@@ -55,17 +71,33 @@
     border-bottom: solid 1px #dcdcdc;
     .menu-btn{
       width: 150px;
-      border-right: solid 1px #dcdcdc;
       text-align: center;
-      line-height: 40px;
-      a{
-        text-decoration: none;
-        color: #696969;
+      line-height: 20px;
+      .home-btn__content{
+        height: 20px;
+        margin: 10px 0;
+        border-right: solid 1px #dcdcdc;
+        a{
+          display: block;
+          text-decoration: none;
+          color: #696969;
+        }
       }
     }
-    .dm-btn{
-      border-right: none;
+    .description-btn{
       width: 180px;
+    }
+    .dm-btn{
+      width: 180px;
+    }
+    .post-btn{
+      position: absolute;
+      right: 0;
+      .home-btn__content{
+        a{
+          color: #4169e1;
+        }
+      }
     }
   }
 
@@ -77,13 +109,16 @@
       display: flex;
       width: 100%;
       .refine{
+        height: 20px;
+        margin: 10px 0;
         width: 100px;
         text-align: center;
-        line-height: 40px;
+        line-height: 20px;
         border-right: solid 1px #dcdcdc;
       }
       .select-animal{
         width: 150px;
+        margin-left: 20px;
         text-align: center;
         line-height: 40px;
       }
@@ -109,24 +144,42 @@
 .cases-main{
   background-color: #f5f5f5;
   width: 100%;
-  height: calc(100% - 160px);
+  min-height: 100%;
+  height: calc(body - 160px);
   .cases{
     display: flex;
     flex-flow: row wrap;
-    padding: 50px 20px 0 20px; 
+    padding: 50px;
+    a{
+      text-decoration: none;
+      color: #696969;
+    }
     .case{
-      height: 300px;
+      height: 280px;
       width: 200px;
       border: solid 1px #dcdcdc;
       background-color: #ffffff;
-      margin-right: 50px;
+      margin: 0 50px 50px 0;
       padding: 10px;
       box-sizing: border-box;
+      font-size: 13px;
       .case__picture{
         height: 150px;
         width: 180px;
-        border: solid 1px #dcdcdc;
         box-sizing: border-box;
+        img{
+          display: block;
+          margin: auto; 
+          max-width: 178px;
+          max-height: 148px;
+          border: solid 1px #dcdcdc;
+        }
+      }
+      .index-case__content{
+        margin-top: 5px;
+      }
+      .case__kind{
+        margin-top: 10px;
       }
     }
   }

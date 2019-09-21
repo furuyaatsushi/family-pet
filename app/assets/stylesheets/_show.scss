@@ -1,0 +1,49 @@
+.case-show__title{
+  margin: 10px 40px 0 40px;
+  font-size: 20px;
+}
+.case-show__main{
+  height: calc(100% - 180px);
+  margin: 20px 40px 40px 40px;
+  display: flex;
+  .case-show__picture{
+    height: 400px;
+    width: 300px;
+    border: solid 1px #dcdcdc;
+    img{
+      max-height: 398px;
+      max-width: 298px;
+    }
+  }
+  .case-show__right-box{
+    margin: 0 50px;
+    width: calc(100% - 300px);
+    .case-content{
+      height: 30px;
+      margin-bottom: 20px;
+      border-bottom: solid 1px #dcdcdc;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    &__top{
+      .case-show__animal{
+        border: solid 2px #f4a406;
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        float: left;
+        background-color: #f4a406;
+      }
+      .case-show__dm{
+        font-size: 12px;
+        line-height: 38px;
+        float: right;
+      }
+    }
+  }
+}

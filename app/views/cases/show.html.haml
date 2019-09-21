@@ -1,0 +1,34 @@
+= render partial: 'layouts/header'
+.case-show__title
+  = @case.user.name + "さんの募集"
+.case-show__main
+  .case-show__picture
+    = image_tag @case.image
+  .case-show__right-box
+    .case-show__right-box__top.clearfix
+      .case-show__animal.case-content
+        = @case.animal
+      .case-show__dm
+        =link_to 'ダイレクトメッセージを送る'
+    .case-show__kind.case-content
+      = @case.animal + "種:"
+      &ensp;
+      = @case.kind
+    .case-show__sex.case-content
+      性別:&ensp;
+      = @case.sex
+    .case-show__prefecture.case-content
+      居住地:&ensp;
+      = @case.prefecture.name
+    .case-show__age.case-content
+      年齢:&ensp;
+      = @case.age
+    .case-show__other.case-content
+      備考:&ensp;
+      = @case.other
+    .case-show__comment.case-content
+      コメント:&ensp;
+      = @case.comment
+    .case-show__created_at.case-content
+      投稿日時:&ensp;
+      = @case.created_at.strftime("%Y年%-m月%-d日 %H時")

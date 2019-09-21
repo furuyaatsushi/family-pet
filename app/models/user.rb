@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :prefecture
+  has_many :cases
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 end

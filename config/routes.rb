@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :cases do
     collection{ get "search"}
   end
+  get 'about' => 'cases#about', as: 'about'
 end

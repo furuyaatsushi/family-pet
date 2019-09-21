@@ -1,0 +1,45 @@
+.cases-top
+  .main-header
+    .main-header__title
+      里親募集サイト「Family-Pet」
+    .main-header__right-box
+      -if user_signed_in?
+        .main-header__right-box__current-user
+          ようこそ、
+          = current_user.name + 'さん'
+        .main-header__right-box__signout-btn
+          =link_to 'サインアウト', destroy_user_session_path, method: :delete
+      -else
+        .main-header__right-box__signup-btn
+          =link_to '新規登録', new_user_registration_path
+        .main-header__right-box__login-btn
+          =link_to 'ログイン', user_session_path
+  .menu-bar
+    .home-btn.menu-btn
+      .home-btn__content
+        =link_to 'HOME', root_path
+    .description-btn.menu-btn
+      .home-btn__content
+        =link_to 'Family-Petとは？', about_path
+    .dm-btn.menu-btn
+      .home-btn__content
+        =link_to 'ダイレクトメッセージ'
+    -if user_signed_in?
+      .post-btn.menu-btn
+        .home-btn__content
+          =link_to '投稿する', new_case_path
+  .search-bar
+    =form_tag :search_cases, method: :get do
+      .refine
+        絞り込み
+      .select-animal
+        犬か猫&ensp;
+        =select_tag :animal, options_for_select([["犬", "犬"], ["猫", "猫"],["選択しない", ""]])
+      .select-prefecture
+        都道府県&ensp;
+        =select_tag :prefecture, options_from_collection_for_select(Prefecture.all, :id, :name)
+      .search-keyword
+        犬種・猫種で検索&ensp;
+        =text_field_tag :keyword
+      .submit
+        =submit_tag "指定した条件で検索"
