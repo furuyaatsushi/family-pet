@@ -25,7 +25,7 @@
       .home-btn__content
         =link_to 'ダイレクトメッセージ'
     -if user_signed_in?
-      .post-btn
+      .post-btn.menu-btn
         .home-btn__content
           =link_to '投稿する', new_case_path
   .search-bar
@@ -34,7 +34,7 @@
         絞り込み
       .select-animal
         犬か猫&ensp;
-        =select_tag :animal, options_for_select([["犬", "犬"], ["猫", "猫"],["選択しない", "nil"]])
+        =select_tag :animal, options_for_select([["犬", "犬"], ["猫", "猫"],["選択しない", ""]])
       .select-prefecture
         都道府県&ensp;
         =select_tag :prefecture, options_from_collection_for_select(Prefecture.all, :id, :name)

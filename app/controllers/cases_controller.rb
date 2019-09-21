@@ -17,15 +17,15 @@ class CasesController < ApplicationController
     if @case.save
       redirect_to root_path, notice: '投稿が完了しました'
     else
-      flash.now[:alert] = '投稿ができまでんでした'
+      flash.now[:alert] = '投稿ができませんでした'
       render :new
     end
   end
 
   def search
     @cases = Case.all
-    unless params[:animal].nil? 
-      @cases = @cases.where(animal: search_params[:animal]) 
+    unless params[:animal].blank? 
+      @cases = @cases.where(animal: params[:animal]) 
     end
     unless params[:prefecture] == '47'
       @cases = @cases.where(prefecture_id: params[:prefecture])
@@ -48,9 +48,5 @@ class CasesController < ApplicationController
   private
   def cases_params
     params.require(:case).permit(:image, :animal, :kind, :sex, :age, :prefecture_id, :other, :comment).merge(user_id: current_user.id)
-  end
-
-  def search_params
-    params.permit(:animal)
   end
 end
