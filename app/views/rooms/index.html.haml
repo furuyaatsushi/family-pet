@@ -1,4 +1,4 @@
-.cases-top
+.cases-top.show-top
   .main-header
     .main-header__title
       里親募集サイト「Family-Pet」
@@ -29,18 +29,12 @@
         -if current_user.hope == "recruitment"
           .home-btn__content
             =link_to '投稿する', new_case_path
-  .search-bar
-    =form_tag :search_cases, method: :get do
-      .refine
-        絞り込み
-      .select-animal
-        犬か猫&ensp;
-        =select_tag :animal, options_for_select([["犬", "犬"], ["猫", "猫"],["選択しない", ""]])
-      .select-prefecture
-        都道府県&ensp;
-        =select_tag :prefecture, options_from_collection_for_select(Prefecture.all, :id, :name)
-      .search-keyword
-        犬種・猫種で検索&ensp;
-        =text_field_tag :keyword
-      .submit
-        =submit_tag "指定した条件で検索"
+
+.rooms-main
+  .dm-index
+    進行中のダイレクトメッセージ一覧
+  .room-index
+    - @entries.each do |entry|
+      = link_to "/rooms/#{entry.room.id}" do
+        .room
+          = entry.room.name + 'さんとのメッセージ'

@@ -37,7 +37,7 @@ class CasesController < ApplicationController
     if @cases.length == 0
       @message = "一致する募集がありませんでした"
     end
-    #binding.pry
+    @page_title = '検索結果'
     render 'index'
   end
 
