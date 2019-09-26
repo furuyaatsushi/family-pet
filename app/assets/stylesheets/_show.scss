@@ -1,5 +1,9 @@
+.case-body{
+  background-color: #f5fffa;
+  min-height: 100%;
+}
 .case-show__title{
-  margin: 10px 40px 0 40px;
+  padding: 10px 40px 0 40px;
   font-size: 20px;
 }
 .case-show__main{
@@ -9,10 +13,9 @@
   .case-show__picture{
     height: 400px;
     width: 300px;
-    border: solid 1px #dcdcdc;
     img{
-      max-height: 398px;
-      max-width: 298px;
+      max-height: 400px;
+      max-width: 300px;
     }
   }
   .case-show__right-box{

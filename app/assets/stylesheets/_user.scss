@@ -1,0 +1,29 @@
+.show-user{
+  background-color: #f5fffa;
+  min-height: 100%;
+}
+.user-title{
+  padding: 10px 50px 0 50px;
+  font-size: 20px;
+}
+.user-main{
+  height: calc(100% - 120px);
+  margin: 20px 50px  0 50px ;
+  height: 50px;
+  .user-have-cases{
+    float: left;
+  }
+  .dm-start{
+    float: right;
+  }
+}
+
+.cases-main{
+  box-sizing: border-box;
+  .user-case-index{
+    padding: 0 50px;
+  }
+  .user-cases{
+    padding: 20px 0 0 50px;
+  }
+}

@@ -1,0 +1,23 @@
+body{
+  background: url("field-3400697_1280.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about__title{
+  margin: 50px;
+  height: 100px;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  background-color: #ffffff;
+  opacity: 0.6;
+}
+.about__main{
+  margin: 0 50px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  padding: 30px 80px;
+  p{
+    font-size: 20px;
+  }
+}

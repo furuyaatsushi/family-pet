@@ -1,7 +1,7 @@
 class CasesController < ApplicationController
 
   def index
-    @cases = Case.all
+    @cases = Case.all.order("created_at DESC")
   end
 
   def show
@@ -23,7 +23,7 @@ class CasesController < ApplicationController
   end
 
   def search
-    @cases = Case.all
+    @cases = Case.all.order("created_at DESC")
     unless params[:animal].blank? 
       @cases = @cases.where(animal: params[:animal]) 
     end
@@ -37,7 +37,7 @@ class CasesController < ApplicationController
     if @cases.length == 0
       @message = "一致する募集がありませんでした"
     end
-    #binding.pry
+    @page_title = '検索結果'
     render 'index'
   end
 

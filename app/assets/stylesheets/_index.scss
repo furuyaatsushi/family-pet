@@ -140,16 +140,20 @@
     }
   }
 }
+.show-top{
+  height: 120px;
+}
 
 .cases-main{
-  background-color: #f5f5f5;
+  background-color: #f5fffa;
   width: 100%;
   min-height: 100%;
   height: calc(body - 160px);
   .cases{
     display: flex;
     flex-flow: row wrap;
-    padding: 50px;
+    padding: 50px 0 50px 50px;
+    box-sizing: border-box;
     a{
       text-decoration: none;
       color: #696969;

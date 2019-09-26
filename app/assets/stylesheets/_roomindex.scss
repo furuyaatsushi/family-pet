@@ -1,0 +1,21 @@
+.rooms-main{
+  background-color: #f5fffa;
+  min-height: 100%;
+  padding: 20px 50px  0 50px ;
+  .dm-index{
+    height: calc(100% - 120px);
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    border-bottom: solid 1px #cdcdcd;
+  }
+  .room-index{
+    a{
+      text-decoration: none;
+      line-height: 50px;
+      .room{
+        height: 50px;
+      }
+    }
+  }
+}
