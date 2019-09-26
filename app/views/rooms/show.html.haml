@@ -6,22 +6,31 @@
       .dmroom-header__right
         = link_to 'トップへ戻る', root_path
 
-.dmroom-main
+.dmroom-main.clearfix
   - if @messages.present?
     - @messages.each do |m|
-      .message
-        .message__name
-          = m.user.name
-        .message__content
-          = m.content
-        .message__date
-          = m.created_at
+      - if m.user_id == current_user.id
+        .message-current.message.clearfix
+          .message__name
+            = m.user.name
+          .message__content
+            = m.content
+          .message__date
+            = m.created_at.strftime("%Y.%m.%d %H:%M:%S") + 'に送信'
+      - else
+        .message-other.message.clearfix
+          .message__name
+            = m.user.name
+          .message__content
+            = m.content
+          .message__date
+            = m.created_at.strftime("%Y.%m.%d %H:%M:%S") + 'に送信'
   - else
     %h3.text-current_user
       メッセージはまだありません
 
 .dmroom-form
   = form_for @message do |f|
-    = f.text_field :content, placeholder: "メッセージを入力"
+    = f.text_field :content, placeholder: "メッセージを入力", class: "message-text"
     = f.hidden_field :room_id, value: "#{@room.id}"
-    = f.submit '送信'
+    = f.submit '送信', class: "message-submit"

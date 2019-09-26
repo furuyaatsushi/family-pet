@@ -1,0 +1,100 @@
+.dmroom-header{
+  height: 80px;
+  width: 100%;
+  background-color: #f0fff0;
+  position: fixed;
+  &__title{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 80px;
+    margin-left: 20px;
+  }
+  &__right{
+    float: right;
+    line-height: 40px;
+    margin: 20px;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #4169e1;
+    a{
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
+}
+
+.dmroom-main{
+  box-sizing: border-box;
+  padding: 100px 20px 0;
+  margin-bottom: 60px;
+  min-height: 100%;
+  background-color: #ffffe0;
+  .message{
+    min-height: 50px;
+    max-width: 30%;
+    min-width: 150px;
+    margin-bottom: 10px; 
+    background-color: #98fb98;
+    padding: 10px;
+    border-radius: 10%;
+    &__name{
+      font-size: 13px;
+      font-weight: bold;
+      border-bottom: 1px solid #808080;
+    }
+    &__content{
+      margin-top: 5px;
+    }
+    &__date{
+      margin-top: 5px;
+      font-size: 10px;
+      color: #696969;
+      text-align: right;
+    }
+  }
+  .message-current{
+    float: right;
+    margin-left: 50%;
+  }
+  .message-other{
+    float: left;
+    margin-right: 50%;
+  }
+  .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.dmroom-form{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #DDDDDD;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  .new_message{
+    width: 100%;
+    height: 40px;
+    .message-text{
+      border: none;
+      float: left;
+      height: 40px;
+      width: calc(100% - 120px);
+      font-size: 16px;
+    }
+    .message-submit{
+      background-color: #00bfff;
+      border: none;
+      color: #ffffff;
+      float: right;
+      font-size: 16px;
+      height: 40px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
+  }
+}

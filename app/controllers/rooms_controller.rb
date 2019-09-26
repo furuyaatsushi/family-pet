@@ -3,7 +3,6 @@ class RoomsController < ApplicationController
 
   def index
     @entries = Entry.where(:user_id => current_user.id)
-    #@user = Entry.where(:room_id => @entries.room.id).where.not(user_id: current_user)
   end
 
   def create
@@ -17,6 +16,7 @@ class RoomsController < ApplicationController
   end
   
   def show
+    @page_title = 'ダイレクトメッセージ'
     @room = Room.find(params[:id])
     if Entry.where(:user_id => current_user.id, :room_id => @room.id).present?
       @messages = @room.messages
