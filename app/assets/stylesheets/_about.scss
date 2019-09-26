@@ -13,11 +13,27 @@ body{
   opacity: 0.6;
 }
 .about__main{
-  margin: 0 50px;
+  margin: 0 50px 30px 50px;
   background-color: #ffffff;
   opacity: 0.6;
   padding: 30px 80px;
   p{
     font-size: 20px;
+    line-height: 30px;
   }
+  .last-text{
+    float: right;
+  }
+}
+.about__footer{
+  float: right;
+  margin: 0 50px 10px 0;
+  a{
+    color: #ffffff;
+  }
+}
+.clearfix::after{
+  clear: both;
+  content: "";
+  display: block;
 }
