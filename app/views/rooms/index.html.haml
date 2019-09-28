@@ -35,7 +35,7 @@
     進行中のダイレクトメッセージ一覧
   .room-index
     - @entries.each do |entry|
-      = link_to "/rooms/#{entry.room.id}" do
+      = link_to room_messages_path(entry.room)  do
         .room
           ・
           = entry.room.name + 'さんとのメッセージ'
