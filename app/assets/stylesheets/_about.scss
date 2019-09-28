@@ -1,10 +1,13 @@
-body{
+.about-body{
   background: url("field-3400697_1280.jpg");
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
 }
 .about__title{
-  margin: 50px;
+  margin: 0 50px 50px 50px;
   height: 100px;
   font-size: 30px;
   line-height: 100px;

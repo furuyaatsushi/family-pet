@@ -6,7 +6,6 @@ class RoomsController < ApplicationController
   end
 
   def create
-    binding.pry
     @room = Room.create(params.require(:room).permit(:name))
     @entry1 = Entry.create(:room_id => @room.id, :user_id => current_user.id)
     @entry2 = Entry.create(params.require(:entry).permit(:user_id, :room_id).merge(:room_id => @room.id))

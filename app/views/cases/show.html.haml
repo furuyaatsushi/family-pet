@@ -7,8 +7,12 @@
       = image_tag @case.image
     .case-show__right-box
       .case-show__right-box__top.clearfix
-        .case-show__animal.case-content
-          = @case.animal
+        - if @case.animal == "犬"
+          .case-show__animal.case-content
+            = image_tag 'icon_112040.svg'
+        -else
+          .case-show__animal.case-content
+            = image_tag '40768.png'
         .case-show__dm
           = link_to 'このユーザーのページ', "/users/#{@case.user_id}", user_id: @case.user_id
       .case-show__kind.case-content

@@ -33,14 +33,16 @@
     }
     &__top{
       .case-show__animal{
-        border: solid 2px #f4a406;
-        border-radius: 100%;
-        height: 30px;
-        width: 30px;
+        height: 40px;
+        width: 40px;
         line-height: 30px;
         text-align: center;
         float: left;
-        background-color: #f4a406;
+        border-bottom: none;
+        img{
+          height: 40px;
+          width: 40px;
+        }
       }
       .case-show__dm{
         font-size: 12px;

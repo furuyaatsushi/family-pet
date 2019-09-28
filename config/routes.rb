@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :cases do
     collection{ get "search"}
   end
-  resources :rooms
-  resources :messages
+  resources :rooms do
+    resources :messages
+  end
   get 'about' => 'cases#about', as: 'about'
 end
