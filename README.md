@@ -1,24 +1,13 @@
-# Family Pet
+# Family-Pet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ご覧いただきありがとうございます。
+このアプリケーションは里親を募集したり希望することで、行き場のないペットを求めている人たちに橋渡ししてあげるためのアプリケーションです。
+この名前は家族とペットを繋いであげたいという思いから名付けさせていただきました。
 
-Things you may want to cover:
+# ライブラリ
 
-* Ruby version
+Ruby on Rails '5.0.7.2'
 
-* System dependencies
+mysql2 '>= 0.3.18', '< 0.6.0'
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#
