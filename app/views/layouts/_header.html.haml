@@ -1,7 +1,7 @@
 .cases-top
   .main-header
     .main-header__title
-      里親募集サイト「Family-Pet」
+      = image_tag 'title.png'
     .main-header__right-box
       -if user_signed_in?
         .main-header__right-box__current-user
@@ -14,6 +14,13 @@
           =link_to '新規登録', new_user_registration_path
         .main-header__right-box__login-btn
           =link_to 'ログイン', user_session_path
+  
+  .small-menu
+    = link_to root_path do
+      = fa_icon 'home'
+    = link_to about_path do
+      = fa_icon 'question'
+  
   .menu-bar
     .home-btn.menu-btn
       .home-btn__content
