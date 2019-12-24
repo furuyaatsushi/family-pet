@@ -158,78 +158,51 @@
       text-decoration: none;
       color: #696969;
       width: 33.3%;
-      .case{
+      .cases-content{
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
-        &__picture{
-          width: 100%;
-          cursor: pointer;
-          display: inline-block;
-          position: relative;
-          text-decoration: none;
-          vertical-align: top;
-          color: inherit;
-          height: 0;
-          overflow: hidden;
-          padding: 0 0 100%;
-          position: relative;
-          width: 100%;
-          img{
-            bottom: 0;
-            position: absolute;
-            top: 0;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-            vertical-align: top;
-            width: 100%;
-            z-index: 1;
-          }
-        }
-        &__main{
+        .case{
           background-color: #fff;
-          box-shadow: rgba(0,0,0,0.18) 0px 2px 4px;
+          &__picture{
+            width: 100%;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            vertical-align: top;
+            color: inherit;
+            height: 0;
+            overflow: hidden;
+            padding: 0 0 100%;
+            position: relative;
+            width: 100%;
+            img{
+              bottom: 0;
+              position: absolute;
+              top: 0;
+              height: 100%;
+              -o-object-fit: cover;
+              object-fit: cover;
+              vertical-align: top;
+              width: 100%;
+              z-index: 1;
+            }
+          }
+          &__main{
+            box-shadow: rgba(0,0,0,0.18) 0px 2px 4px;
+            .case__kind{
+              padding-top: 10px;
+              overflow: hidden;
+              height: 16px;
+            }
+            .index-case__content{
+              margin-top: 5px;
+              height: 16px;
+            }
+          }
         }
       }
     }
   }
-  // .cases{
-  //   display: flex;
-  //   flex-flow: row wrap;
-  //   padding: 50px 0 50px 50px;
-  //   box-sizing: border-box;
-  //   a{
-  //     text-decoration: none;
-  //     color: #696969;
-  //   }
-  //   .case{
-  //     height: 280px;
-  //     width: 200px;
-  //     border: solid 1px #dcdcdc;
-  //     background-color: #ffffff;
-  //     margin: 0 50px 50px 0;
-  //     padding: 10px;
-  //     box-sizing: border-box;
-  //     font-size: 13px;
-  //     .case__picture{
-  //       height: 150px;
-  //       width: 180px;
-  //       box-sizing: border-box;
-  //       img{
-  //         display: block;
-  //         margin: auto; 
-  //         max-width: 178px;
-  //         max-height: 148px;
-  //         border: solid 1px #dcdcdc;
-  //       }
-  //     }
-  //     .index-case__content{
-  //       margin-top: 5px;
-  //     }
-  //     .case__kind{
-  //       margin-top: 10px;
-  //     }
-  //   }
-  // }
 }
