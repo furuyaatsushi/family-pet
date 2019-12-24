@@ -6,6 +6,7 @@
 .cases-top{
   height: 160px;
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   .main-header{
     height: 80px;
     background-color: #f0fff0;
@@ -149,6 +150,7 @@
   width: 100%;
   min-height: 100%;
   height: calc(body - 160px);
+  padding: 30px;
   .cases{
     display: flex;
     flex-wrap: wrap;
@@ -158,12 +160,36 @@
       width: 33.3%;
       .case{
         width: 100%;
-        padding: 3px;
+        padding: 10px;
         box-sizing: border-box;
         &__picture{
+          width: 100%;
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          text-decoration: none;
+          vertical-align: top;
+          color: inherit;
+          height: 0;
+          overflow: hidden;
+          padding: 0 0 100%;
+          position: relative;
+          width: 100%;
           img{
+            bottom: 0;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            vertical-align: top;
             width: 100%;
+            z-index: 1;
           }
+        }
+        &__main{
+          background-color: #fff;
+          box-shadow: rgba(0,0,0,0.18) 0px 2px 4px;
         }
       }
     }
