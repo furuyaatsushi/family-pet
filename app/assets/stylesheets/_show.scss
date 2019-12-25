@@ -31,6 +31,12 @@
       display: block;
       clear: both;
     }
+    .case-show__comment{
+      min-height: 30px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px #dcdcdc;
+    }
     &__top{
       .case-show__animal{
         height: 40px;
