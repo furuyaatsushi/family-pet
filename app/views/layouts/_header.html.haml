@@ -17,13 +17,13 @@
   
   .small-menu
     .small-menu__left
-      .small-menu__home
+      .small-menu__left__home.small-menu__left__content
         = link_to root_path do
           = fa_icon 'home'
-      .small-menu__about
+      .small-menu__left__about.small-menu__left__content
         = link_to about_path do
           = fa_icon 'question'
-      .small-menu__message
+      .small-menu__left__message.small-menu__left__content
         = link_to rooms_path do
           = fa_icon 'envelope'
     .small-menu__right
@@ -39,6 +39,8 @@
           =link_to '新規登録', new_user_registration_path
         .small-menu__login-btn
           =link_to 'ログイン', user_session_path
+      .small-menu__search
+        = fa_icon 'search'
 
   
   .menu-bar
