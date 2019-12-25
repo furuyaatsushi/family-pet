@@ -21,6 +21,12 @@
     height: 40px;
     background-color: #fffff0;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    &__left{
+      float: left;
+    }
+    &__right{
+      float: right;
+    }
   }
   .menu-bar{
     display: none;
