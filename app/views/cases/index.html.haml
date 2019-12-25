@@ -10,7 +10,7 @@
             .case__picture
               = image_tag a_case.image
             .case__main
-              .case__kind
+              .case__kind.index-case__content
                 ・
                 = a_case.kind
               .case__sex.index-case__content
@@ -22,5 +22,5 @@
               .case__age.index-case__content
                 ・
                 = a_case.age
-              .case__created_at.index-case__content
+              .case__created_at
                 = a_case.created_at.strftime("%Y-%m-%d")
