@@ -16,7 +16,7 @@
 ダイレクトメッセージ画面
 <img width="739" alt="スクリーンショット 2019-12-26 1.20.05.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/433361/347e06ec-b101-718d-931b-81b9e4874dd2.png">
 
-# ライブラリ
+# 開発環境
 
 Ruby on Rails '5.0.7.2'<br>
 mysql2 '>= 0.3.18', '< 0.6.0'
