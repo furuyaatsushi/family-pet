@@ -10,7 +10,7 @@
 現在このアプリケーションは公開していません。
 
 # プレビュー
-募集一覧<br>
+募集一覧画面<br>
 <img width="735" alt="スクリーンショット 2019-12-26 1.17.09.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/433361/19a44588-eb4a-6fb2-1e12-bf933d6fd8a8.png">
 
 ダイレクトメッセージ画面
